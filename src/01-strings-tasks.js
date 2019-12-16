@@ -126,8 +126,11 @@ function repeatString(value, count) {
  *   'I like legends', 'end' => 'I like legs',
  *   'ABABAB','BA' => 'ABAB'
  */
-function removeFirstOccurrences(/* str, value */) {
-  throw new Error('Not implemented');
+// https://www.w3resource.com/javascript-exercises/javascript-string-exercise-26.php
+function removeFirstOccurrences(str, value) {
+  const index = str.indexOf(value);
+  if (index === -1) return str;
+  return str.slice(0, index) + str.slice(index + value.length);
 }
 
 /**
@@ -175,8 +178,8 @@ function convertToUpperCase(str) {
  *   ],
  *   'info@gmail.com' => ['info@gmail.com']
  */
-function extractEmails(/* str */) {
-  throw new Error('Not implemented');
+function extractEmails(str) {
+  return str.split(';');
 }
 
 /**

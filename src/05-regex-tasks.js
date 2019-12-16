@@ -31,8 +31,10 @@
  *
  * @return {RegExp}
  */
+
+// https://stackoverflow.com/questions/136505/searching-for-uuids-in-text-with-regex
 function getRegexForGuid() {
-  throw new Error('Not implemented');
+  return /\{[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}\}/;
 }
 
 
@@ -54,7 +56,7 @@ function getRegexForGuid() {
  *
  */
 function getRegexForPitSpot() {
-  throw new Error('Not implemented');
+  return /s.+|.+i.+/;
 }
 
 
