@@ -493,8 +493,10 @@ function getIntervalArray(/* start, end */) {
  *   [ 'a', 'a', 'a', 'a' ]  => [ 'a' ]
  *   [ 1, 1, 2, 2, 3, 3, 4, 4] => [ 1, 2, 3, 4]
  */
-function distinct(/* arr */) {
-  throw new Error('Not implemented');
+
+// https://stackoverflow.com/questions/38206915/filter-out-array-to-have-only-unique-values?noredirect=1&lq=1
+function distinct(arr) {
+  return [...new Set(arr)];
 }
 
 /**
